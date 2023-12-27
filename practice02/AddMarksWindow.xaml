@@ -1,0 +1,33 @@
+﻿<Window x:Class="practice02.AddMarksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practice02"
+        mc:Ignorable="d"
+        Title="Добавить оценку" 
+        Height="200" Width="300" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="cbStudent" Grid.ColumnSpan="2" Margin="5">
+            <ComboBoxItem Content="Выберите студента" IsSelected="True" IsEnabled="False"/>
+            <ComboBoxItem x:Name="item1" Content="Михайлова Софья Ильинична"/>
+            <ComboBoxItem x:Name="item2" Content="Шуваев Максим Романович"/>
+            <ComboBoxItem x:Name="item3" Content="Кулаков Дмитрий Александрович"/>
+        </ComboBox>
+        <DatePicker x:Name="dpDate" Grid.Row="1" Grid.ColumnSpan="2" Margin="5"/>
+        <Label Content="Введите оценку" Grid.Row="2" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="tbMark" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Button Content="Сохранить" Grid.Row="3" Grid.ColumnSpan="2" Margin="5" Click="Save_Click" />
+    </Grid>
+</Window>
